@@ -11,7 +11,7 @@ export const useTodoStore = defineStore('todo', {
         id: Date.now(),
         text: text,
         completed: false,
-        date: new Date().toLocaleString(), // 등록 시간
+        date: new Date(), // 등록 시간: Date 객체로 저장
       });
     },
     deleteTodo(id) {

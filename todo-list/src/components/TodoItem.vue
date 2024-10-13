@@ -23,7 +23,7 @@ export default {
             const d = new Date(date);
             if (isNaN(d.getTime())) { // 유효성 검사
                 console.error("Invalid date:", date);
-                return date; // 원래 날짜 문자열 반환 (문제 해결 전까지)
+                return date; // 원래 날짜 문자열 반환
             }
             const year = d.getFullYear();
             const month = String(d.getMonth() + 1).padStart(2, '0'); // 두 자리로 포맷
@@ -54,6 +54,24 @@ export default {
 }
 
 .todo-date {
-    margin-left: 5px; /* 날짜와 텍스트 사이에 간격 추가 */
+    margin-left: 5px;
+    /* 날짜와 텍스트 사이에 간격 추가 */
+}
+
+button {
+  height: 20px; /* 입력란과 동일한 높이로 설정 */
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  background-color: red; /* 버튼 색상 */
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center; /* 텍스트 중앙 정렬 */
+  justify-content: center; /* 텍스트 수평 중앙 정렬 */
+}
+
+button:hover {
+  background-color: rgb(112, 0, 0); /* 호버 시 색상 */
 }
 </style>
